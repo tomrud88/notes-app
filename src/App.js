@@ -6,7 +6,6 @@ import { NoteProvider } from './NotesContext'
 
 function App() {
    
-    
   return (
     <div className="App">
       <NoteProvider>
