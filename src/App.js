@@ -1,23 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import Notes from './Notes';
+import { Route } from 'react-router-dom'
+import ChosenNote from './ChosenNote';
+import { NoteProvider } from './NotesContext'
 
 function App() {
+   
+    
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NoteProvider>
+        <nav>
+          <h4 className="navp">Notes App</h4>
+        </nav>
+        <Route exact path="/">
+          <Notes />
+        </Route>
+        <Route path="/:id">
+          <ChosenNote />
+        </Route>
+      </NoteProvider>
     </div>
   );
 }

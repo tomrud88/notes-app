@@ -1,0 +1,54 @@
+.note{
+    display: flex;
+    width:80%;
+    border:solid 1px black;
+    padding:12px;
+    margin:10px;
+    border-radius: 10px;
+    background-color: rgb(125, 208, 227);
+}
+.note:hover{
+    background-color: rgb(117, 215, 237)
+}
+.noteButtons{
+    display: flex;
+    justify-content: space-between;
+}
+.description{
+    padding: 10px;
+    font-size: 20px;
+    width: 100%;
+}
+.noteDate{
+    text-align: left;
+    margin-bottom: 0;
+}
+.noteDate:hover{
+    transform: scale(1.05);
+    text-decoration: underline;
+}
+
+.deleteBtn{
+    padding:13px 25px;
+    background-color: rgb(222, 32, 32);
+    color:white;
+    border-radius: 10px;
+}
+.deleteBtn:hover{
+    cursor: pointer;
+    background-color: rgb(250, 5, 5);
+}
+@media (max-width:600px){
+    .note{
+        width: 100%;
+    }
+}
+@media (max-width:300px){
+    .noteButtons{
+        display: flex;
+        flex-direction: column;
+    }
+    .noteDate{
+        margin-bottom: 10px;
+    }
+}

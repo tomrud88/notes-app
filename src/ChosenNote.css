@@ -1,0 +1,29 @@
+.buttonCon{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+.backBtn{
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+.backBtn:hover{
+   background-color: aliceblue;
+}
+.date{
+    text-align: right;
+    margin: 5px;
+}
+.mainCon{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    width:60%
+}
+.noteBody{
+    box-sizing: content-box;
+    background-color: rgb(127, 232, 255);
+    padding: 5px 25px;
+    border-radius: 10px;
+    font-size: 20px;
+    border:1px solid black
+}
