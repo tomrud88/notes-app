@@ -8,22 +8,18 @@ function Notes() {
     const[notes,setNotes] = useContext(NotesContext)
   
     const deleteN = (id) => {
-       console.log('hello')
-      const nnotes = notes.filter(note => (
+      const notesMinusOne = notes.filter(note => (
           note.id !== id
       ))
-       console.log(nnotes)
-       setNotes(nnotes)
+       setNotes(notesMinusOne)
   }
     
   const addNewNote = (note) => {
-      const notess = [...notes] 
-      console.log(notess)
-      const newNotes = [note,...notess];
-      console.log(newNotes)
+      const copy = [...notes] 
+      const newNotes = [note,...copy];
        setNotes(newNotes)
-    }
-    console.log(notes)
+  }
+  
   return (
     <div className='mainContainer'>
       <AddNotes onAdd={(note) => addNewNote(note)} />

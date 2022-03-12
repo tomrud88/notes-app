@@ -9,9 +9,7 @@ function ChosenNote(props) {
   const [notes, setNotes] = useContext(NotesContext);
   
   const deleteN = (id) => {
-    console.log("hello");
     const nnotes = notes.filter((note) => note.id !== id);
-    console.log(nnotes);
     setNotes(nnotes);
   };
   
